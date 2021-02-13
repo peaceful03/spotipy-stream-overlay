@@ -2,6 +2,8 @@
 A browser source stream overlay using python and html
 
 # Requirements
+If you are using this code on Windows please use [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). The reason for this is that most commands are piped through from the bash terminal.
+
 You need to download [Python3](https://www.python.org/downloads/) to run the script file.
 
 After python is installed, using PIP, download spotipy
@@ -18,6 +20,6 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="YOUR CLIENT ID",
                                                redirect_uri="http://localhost:8888/callback",
                                                scope="user-read-currently-playing"))
 ```
-To find your client_id and client_secret you need to login at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) and create a new app. When the app has been created change the Redirect URls to `http://localhost:8888/callback`
+To find your client_id and client_secret you need to login at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) and create a new app. When the app has been created edit the settings and set the Redirect URls to `http://localhost:8888/callback`
 
 ![alt text](https://cdn.discordapp.com/attachments/807327456494354514/810295728596713552/unknown.png)
